@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tyrone Shine &mdash; SheThinx Front-end Challenge</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Set up here and deferred so that the page will finish loading, not worrying about it's position-->
+    <script src="js/script.js" type="module" type="text/javascript" defer></script>
+</head>
+<body>
+	<!-- 
+		Went with HTML, vanilla JS, and CSS because anything else feels sort of overkill
+		for what this test is looking for, so I just went with the the lightest it needs
+	 -->
+
+	<!-- BEGIN: Container -->
+	<main class="container">
+
+		<!-- BEGIN: Product -->
+		<section class="product d-grid">
+
+			<div class="product__column">
+				
+				<div class="product-images">
+					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
+				</div>
+
+				<div class="product-carousel">
+					<!-- 
+						I was originally thinking of doing this purely in css, however, the one key
+						to make it doing it is `scroll-snap-stop` isn't supported enough to even entertain it
+					 -->
+					<div class="product-carousel__track">
+						<div class="product-carousel__slide">
+							<img src="" loading="lazy" alt="Hi-Waist">
+						</div>
+						<div class="product-carousel__slide">
+							<img src="" loading="lazy" alt="Hi-Waist">
+						</div>
+						<div class="product-carousel__slide">
+							<img src="" loading="lazy" alt="Hi-Waist">
+						</div>
+						<div class="product-carousel__slide">
+							<img src="" loading="lazy" alt="Hi-Waist">
+						</div>
+						<div class="product-carousel__slide">
+							<img src="" loading="lazy" alt="Hi-Waist">
+						</div>
+					</div>
+
+					<div class="product-carousl__dots">
+						<ul>
+							<li class="product-carousl__dot product-carousl__dot--active" role="presentation">
+								<button type="button" role="button">1</button>
+							</li>
+							<li class="product-carousl__dot" role="presentation">
+								<button type="button" role="button">2</button>
+							</li>
+							<li class="product-carousl__dot" role="presentation">
+								<button type="button" role="button">3</button>
+							</li>
+							<li class="product-carousl__dot" role="presentation">
+								<button type="button" role="button">4</button>
+							</li>
+							<li class="product-carousl__dot" role="presentation">
+								<button type="button" role="button">5</button>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="product__column product__column--sticky">
+
+				<div class="product-details">
+					<h1 class="product-details__title">Hi-Waist</h1>
+					<div class="product-details__description">
+						<p>Heavy days. Holds up to 2 tampon&apos;s worth.</p>
+						<p>The phrase &ldquo;treat yo&apos;self&rdquo; reaches new belly-button brushing heights with the Hi-Waist, and it&apos;s here just in time for cuffing season.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="product__column product__column--sticky">
+				
+				<div class="product-details">
+
+					<span class="product-details__price">$35.00</span>
+
+					<div class="product-details__color-picker border">
+						<span class="product-details__label text-lowercase">Color</span>
+						
+						<input type="radio" id="color-black" name="contact" value="black" checked>
+					    <label for="color-black" class="text-lowercase">Black</label>
+
+					    <input type="radio" id="color-beige" name="contact" value="beige">
+					    <label for="color-beige" class="text-lowercase">Beige</label>
+					</div>
+
+					<div class="product-details__quantity border">
+						<button class="product-details__quantity-control" type="button" role="button">Minus</button>
+						<span class="text-lowercase">Quantity (<span class="product-details__number">0</span>)</span>
+						<button class="product-details__quantity-control" type="button" role="button">Plus</button>
+					</div>
+
+					<div class="product-details__size-select border">
+						<span class="product-details__label text-lowercase">Size</span>
+						<ul class="product-details__select-options">
+							<li class="product-details__select-option">
+								<button type="button" role="button">XS</button>
+							</li>
+							<li class="product-details__select-option">
+								<button type="button" role="button">S</button>
+							</li>
+							<li class="product-details__select-option">
+								<button type="button" role="button">M</button>
+							</li>
+							<li class="product-details__select-option">
+								<button type="button" role="button">L</button>
+							</li>
+							<li class="product-details__select-option">
+								<button type="button" role="button">XL</button>
+							</li>
+							<li class="product-details__select-option">
+								<button type="button" role="button">XXL</button>
+							</li>
+						</ul>
+					</div>
+
+					<button class="product-details__size-chart text-link text-lowercase text-small" type="button" role="button">What&apos;s my size?</button>
+
+					<button class="product-details__size-cta text-lowercase" type="button" role="button">Add to cart</button>
+
+					<a href="" class="text-lowercase">Build a cycle set and save up to 20%</a>
+				</div>
+			</div>
+			
+		</section>
+		<!-- END: Product -->
+
+
+		<!-- BEGIN: Shop more -->
+		<section class="shop-more d-grid">
+			<!-- 
+				Could use picture for better handling of the images at different sizes,
+				however only one size was given, these are local, and they aren't huge
+			 -->
+			
+			<div class="show-more__item">
+				<img src="" loading="lazy" alt="Shop Hiphugger">
+				<a href="#">Shop Hiphugger</a>
+				<span class="text-lowercase">Heavy days</span>
+			</div>
+
+			<div class="show-more__item">
+				<img src="" loading="lazy" alt="Shop Cheeky">
+				<a href="#">Shop Cheeky</a>
+				<span class="text-lowercase">light days</span>
+			</div>
+
+			<div class="show-more__item show-more__item--full">
+				<img src="" loading="lazy" alt="Shop Thong">
+				<a href="#">Shop Thong</a>
+				<span class="text-lowercase">Lightest days</span>
+			</div>
+
+			<div class="show-more__item">
+				<img src="" loading="lazy" alt="Shop Sport">
+				<a href="#">Shop Sport</a>
+				<span class="text-lowercase">Medium days</span>
+			</div>
+
+			<div class="show-more__item">
+				<img src="" loading="lazy" alt="Shop Boyshirt">
+				<a href="#">Shop Boyshirt</a>
+				<span class="text-lowercase">Light days</span>
+			</div>
+
+		</section>
+		<!-- END: Shop more -->
+	</main>
+	<!-- END: Container -->
+</body>
+</html>
