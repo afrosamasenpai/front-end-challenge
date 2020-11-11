@@ -98,28 +98,46 @@
 
 			<div class="product__column product__column--sticky">
 				
-				<div class="product-details">
+				<div class="product-details d-flex">
 
 					<span class="product-details__price">$35.00</span>
 
-					<div class="product-details__color-picker border">
+					<div class="product-details__color-picker border d-flex">
 						<span class="product-details__label text-lowercase">Color</span>
 						
-						<input type="radio" id="color-black" name="contact" value="black" checked>
-					    <label for="color-black" class="text-lowercase">Black</label>
+						<input type="radio" id="color-black" class="visually-hidden product-details__color" name="contact" value="black" checked>
+					    <label for="color-black" class="product-details__color-label text-lowercase">
+					    	Black
+					    	<span class="icon icon--check">&check;</span>
+					    </label>
 
-					    <input type="radio" id="color-beige" name="contact" value="beige">
-					    <label for="color-beige" class="text-lowercase">Beige</label>
+					    <input type="radio" id="color-beige" class="visually-hidden product-details__color" name="contact" value="beige">
+					    <label for="color-beige" class="product-details__color-label product-details__color-label--beige text-lowercase">
+					    	Beige
+					    	<span class="icon icon--check">&check;</span>
+					    </label>
 					</div>
 
-					<div class="product-details__quantity border">
-						<button class="product-details__quantity-control button--inversed" type="button" role="button">Minus</button>
+					<div class="product-details__quantity border d-flex">
+						<button class="product-details__quantity-control button--inversed" type="button" role="button">
+							<span class="visually-hidden">Minus</span>
+							<span class="icon icon--minus" aria-hidden="true">&minus;</span>
+						</button>
+						
 						<span class="text-lowercase">Quantity (<span class="product-details__number">0</span>)</span>
-						<button class="product-details__quantity-control button--inversed" type="button" role="button">Plus</button>
+						
+						<button class="product-details__quantity-control button--inversed" type="button" role="button">
+							<span class="visually-hidden">Plus</span>
+							<span class="icon icon--plus" aria-hidden="true">&plus;</span>
+						</button>
 					</div>
 
 					<div class="product-details__size-select border">
-						<span class="product-details__label text-lowercase">Size</span>
+						<span class="product-details__label text-lowercase d-flex">
+							Size
+							<span class="icon icon-chevron icon-chevron--down">&rsaquo;</span>
+						</span>
+						
 						<ul class="product-details__select-options">
 							<li class="product-details__select-option">
 								<button class="button--inversed" type="button" role="button">XS</button>

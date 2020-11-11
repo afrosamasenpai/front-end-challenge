@@ -23,7 +23,7 @@ but this is a vanilla only since it's been a while
 
 :root {
 	--black: #000;
-	--beight: #f0d39b;
+	--beige: #f0d39b;
 	--white: #fff;
 	--offwhite: #f7f7f8;
 }
@@ -41,6 +41,8 @@ body {
 	font-size: 1rem;
 	letter-spacing: 0.04em;
 	font-weight: 400;
+	margin: 0;
+	padding: 0;
 }
 
 /* 
@@ -50,8 +52,8 @@ a,
 .text-link {
 	color: var(--black);
 	text-decoration: underline;
-	cursor: pointer;
 	background-color: transparent;
+	padding: 0;
 }
 
 /*
@@ -72,15 +74,31 @@ button.text-link:hover {
 	font-size: 0.75rem;
 }
 
+.visually-hidden {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	position: absolute;
+	left: -10000%;
+	right: -10000%;
+}
+
 button {
 	color: var(--white);
 	background-color: var(--black);
 	border: none;
+	font-family: inherit;
+	padding: 0.25rem;
+	cursor: pointer;
 }
 
 button.button--inversed {
 	color: var(--black);
 	background-color: transparent;
+}
+
+.border {
+	border: 1px solid var(--black);
 }
 
 .d-grid {
@@ -89,6 +107,14 @@ button.button--inversed {
 
 .d-flex {
 	display: flex;
+}
+
+.icon {
+	display: inline-block;
+}
+
+.icon-chevron--down {
+	transform: rotate(90deg)
 }
 /* 
 END: Generics
@@ -100,7 +126,7 @@ BEGIN: Main
 */
 
 .container {
-
+	margin: 0 auto;
 }
 
 /*
@@ -116,9 +142,49 @@ BEGIN: Product
 	background-color: var(--offwhite);
 }
 
+.product-details {
+	flex-direction: column;
+}
+
 .product-details__title {
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
+}
+
+.product-details__color-picker {
+	justify-content: space-between;
+}
+
+.product-details__color-picker > * {
+	width: 100%;
+}
+
+.product-details__color + label .icon {
+	visibility: hidden;
+}
+
+.product-details__color:checked + label .icon {
+	visibility: visible;
+}
+
+.product-details__color-label {
+	text-align: center;
+	cursor: pointer;
+	color: var(--white);
+	background-color: var(--black);
+}
+
+.product-details__color-label--beige {
+	color: var(--black);
+	background-color: var(--beige);
+}
+
+.product-details__quantity {
+	justify-content: space-between;
+}
+
+.product-details__size-select .product-details__label {
+	justify-content: space-between;
 }
 
 /*
@@ -148,9 +214,9 @@ BEGIN: Shop more
 
 .shop-more__item img {
 	width: 100%;
-	/*max-width: 470px;*/
 	height: auto;
 }
 
 /*
-END: Shop more;
+END: Shop more
+*/
