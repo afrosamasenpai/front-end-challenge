@@ -26,6 +26,7 @@ but this is vanilla only since it's been a while since I've done vanilla
 	--beige: #f0d39b;
 	--white: #fff;
 	--off-white: #f7f7f8;
+	--grey: #7b7b7c;
 }
 
 * {
@@ -34,6 +35,7 @@ but this is vanilla only since it's been a while since I've done vanilla
 
 html {
 	font-size: 16px;
+	font-size: 14px;
 }
 
 body {
@@ -122,6 +124,19 @@ button.button--inversed {
 
 .icon {
 	display: inline-block;
+	color: currentColor;
+	fill: currentColor;
+	width: 1rem;
+	height: auto;
+}
+
+.icon-check {
+	width: 1.5rem;
+}
+
+
+.icon-chevron {
+	font-size: 1.5rem;
 }
 
 .icon-chevron--down {
@@ -149,18 +164,29 @@ END: Main
 BEGIN: Product
 */
 
+.product {
+	background-color: var(--off-white);
+	padding-bottom: 2rem;
+}
+
 /*
 BEGIN: Carousel/Slider/Whatever floats for boat
 */
+
+.product-carousel {
+	margin-bottom: 4rem;
+}
 
 .product-carousel__track {
 	max-width: 800px;
 	overflow: hidden;
 	margin: 0 auto;
+	padding: 0 2rem;
 }
 
 .product-carousel__slide {
 	width: 100%;
+	flex: none;
 }
 
 .product-carousel__slide-image {
@@ -168,21 +194,43 @@ BEGIN: Carousel/Slider/Whatever floats for boat
 	height: auto;
 }
 
+.product-carousl__dots {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 4rem;
+	justify-content: center;
+}
+
+.product-carousl__dot {
+	list-style: none;
+	margin: 0 0.5rem;
+}
+
+.product-carousl__dot-button {
+	color: transparent;
+	background-color: var(--grey);
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	padding: 0;
+}
+
+.product-carousl__dot-button--active {
+	background-color: var(--black);
+}
+
 /*
 END: Carousel/Slider/Whatever floats for boat
 */
 
-
-.product {
-	background-color: var(--off-white);
-}
 
 .product-details {
 	flex-direction: column;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 800px;
-	padding: 0 2rem;
+	padding: 0 4rem;
 }
 
 .product-details > * {
@@ -190,17 +238,13 @@ END: Carousel/Slider/Whatever floats for boat
 }
 
 .product-details__title {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	text-transform: uppercase;
-	letter-spacing: 0.25em;
+	letter-spacing: 0.325em;
 }
 
 .product-details__description {
 	margin-bottom: 3rem;
-}
-
-.product-details__label {
-	font-size: 1rem;
 }
 
 /*
@@ -211,9 +255,10 @@ BEGIN: Color picker
 	align-items: center;
 }
 
-.product-details__color-picker > * {
+.product-details__color-picker-label,
+.product-details__color-label {
 	width: 100%;
-	padding: 0.5rem;
+	padding: 0.125rem 0.5rem;
 }
 
 .product-details__color + label .icon {
@@ -225,10 +270,12 @@ BEGIN: Color picker
 }
 
 .product-details__color-label {
-	text-align: center;
+	text-align: left;
 	cursor: pointer;
 	color: var(--white);
 	background-color: var(--black);
+	align-items: baseline;
+	padding-left: 1rem;
 }
 
 .product-details__color-label--beige {
@@ -270,17 +317,28 @@ BEGIN: Custom select
 
 .product-details__select-label {
 	width: 100%;
-	padding: 0.5rem;
+	padding: 0.125rem 0.5rem;
 	justify-content: space-between;
 	align-items: center;
 }
 
 .product-details__select-options {
 	padding: 0;
+	margin: 0;
+	display: none;
+}
+
+.product-details__select-options--open {
+	display: block;
 }
 
 .product-details__select-option {
 	list-style: none;
+}
+
+.product-details__option-button {
+	width: 100%;
+	text-align: left;
 }
 /*
 END: Custom select
@@ -319,7 +377,7 @@ BEGIN: Shop more
 .shop-more {
 	width: 100%;
 	max-width: 800px;
-	padding: 2rem 2rem;
+	padding: 4rem 4rem 2rem;
 	margin: 0 auto;
 }
 
@@ -331,7 +389,8 @@ BEGIN: Shop more
 	margin-bottom: 0;
 }
 
-.shop-more__item > * {
+.shop-more__image,
+.shop-more__link {
 	display: block;
 	margin-bottom: 1rem;
 }

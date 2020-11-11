@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Tyrone Shine &mdash; SheThinx Front-end Challenge</title>
 	<meta charset="utf-8">
@@ -38,7 +38,7 @@
 					<!-- 
 						I was originally thinking of doing this purely in css, however, the one key
 						to make it doing it is `scroll-snap-stop` isn't supported enough to even entertain it,
-						since it isn't needed, I maybe just build it out but not add the functionality
+						since it isn't needed, I may just build it out but not add the functionality
 					 -->
 					<div class="product-carousel__track d-flex">
 						<div class="product-carousel__slide">
@@ -61,25 +61,38 @@
 						</div>
 					</div>
 
-					<div class="product-carousl__dots">
-						<ul>
-							<li class="product-carousl__dot product-carousl__dot--active" role="presentation">
-								<button class="product-carousl__dot-button" type="button" role="button">1</button>
-							</li>
-							<li class="product-carousl__dot" role="presentation">
-								<button class="product-carousl__dot-button" type="button" role="button">2</button>
-							</li>
-							<li class="product-carousl__dot" role="presentation">
-								<button class="product-carousl__dot-button" type="button" role="button">3</button>
-							</li>
-							<li class="product-carousl__dot" role="presentation">
-								<button class="product-carousl__dot-button" type="button" role="button">4</button>
-							</li>
-							<li class="product-carousl__dot" role="presentation">
-								<button class="product-carousl__dot-button" type="button" role="button">5</button>
-							</li>
-						</ul>
-					</div>
+					<ul class="product-carousl__dots d-flex">
+						<li class="product-carousl__dot" role="presentation">
+							<button class="product-carousl__dot-button product-carousl__dot-button--active" type="button" role="button">
+								<span class="visually-hidden">1</span>
+							</button>
+						</li>
+						<li class="product-carousl__dot" role="presentation">
+							<button class="product-carousl__dot-button" type="button" role="button">
+								<span class="visually-hidden">2</span>
+							</button>
+						</li>
+						<li class="product-carousl__dot" role="presentation">
+							<button class="product-carousl__dot-button" type="button" role="button">
+								<span class="visually-hidden">3</span>
+							</button>
+						</li>
+						<li class="product-carousl__dot" role="presentation">
+							<button class="product-carousl__dot-button" type="button" role="button">
+								<span class="visually-hidden">4</span>
+							</button>
+						</li>
+						<li class="product-carousl__dot" role="presentation">
+							<button class="product-carousl__dot-button" type="button" role="button">
+								<span class="visually-hidden">5</span>
+							</button>
+						</li>
+						<li class="product-carousl__dot" role="presentation">
+							<button class="product-carousl__dot-button" type="button" role="button">
+								<span class="visually-hidden">6</span>
+							</button>
+						</li>
+					</ul>
 
 				</div>
 
@@ -107,15 +120,23 @@
 						<span class="product-details__color-picker-label text-lowercase">Color</span>
 						
 						<input type="radio" id="color-black" class="product-details__color visually-hidden" name="contact" value="black" checked>
-					    <label for="color-black" class="product-details__color-label text-lowercase">
+					    <label for="color-black" class=" product-details__color-label d-flex text-lowercase">
 					    	Black
-					    	<span class="icon icon--check">&check;</span>
+
+					    	<svg class="icon icon-check" data-name="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80">
+								<path d="M75,24.7,70.72,29C61.17,38.52,51.07,49.32,41.53,59L28.78,48.55l-4.62-3.81L16.53,54l4.63,3.81,17,14,4.22,3.47,3.84-3.87C57,60.61,68.68,48,79.22,37.42l4.25-4.25Z"/>
+							</svg>
 					    </label>
 
 					    <input type="radio" id="color-beige" class="product-details__color visually-hidden" name="contact" value="beige">
-					    <label for="color-beige" class="product-details__color-label product-details__color-label--beige text-lowercase">
+					    <label for="color-beige" class="product-details__color-label product-details__color-label--beige d-flex text-lowercase">
 					    	Beige
-					    	<span class="icon icon--check">&check;</span>
+					    	
+					    	<svg class="icon icon-check" data-name="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80">
+
+								<path d="M75,24.7,70.72,29C61.17,38.52,51.07,49.32,41.53,59L28.78,48.55l-4.62-3.81L16.53,54l4.63,3.81,17,14,4.22,3.47,3.84-3.87C57,60.61,68.68,48,79.22,37.42l4.25-4.25Z"/>
+
+							</svg>
 					    </label>
 					</div>
 
@@ -141,22 +162,22 @@
 						
 						<ul class="product-details__select-options">
 							<li class="product-details__select-option">
-								<button class="button--inversed" type="button" role="button">XS</button>
+								<button class="product-details__option-button button--inversed" type="button" role="button">XS</button>
 							</li>
 							<li class="product-details__select-option">
-								<button class="button--inversed" type="button" role="button">S</button>
+								<button class="product-details__option-button button--inversed" type="button" role="button">S</button>
 							</li>
 							<li class="product-details__select-option">
-								<button class="button--inversed" type="button" role="button">M</button>
+								<button class="product-details__option-button button--inversed" type="button" role="button">M</button>
 							</li>
 							<li class="product-details__select-option">
-								<button class="button--inversed" type="button" role="button">L</button>
+								<button class="product-details__option-button button--inversed" type="button" role="button">L</button>
 							</li>
 							<li class="product-details__select-option">
-								<button class="button--inversed" type="button" role="button">XL</button>
+								<button class="product-details__option-button button--inversed" type="button" role="button">XL</button>
 							</li>
 							<li class="product-details__select-option">
-								<button class="button--inversed" type="button" role="button">XXL</button>
+								<button class="product-details__option-button button--inversed" type="button" role="button">XXL</button>
 							</li>
 						</ul>
 					</div>
