@@ -10,7 +10,7 @@ In SASS, as you know, it'll look more like:
 	&__description {}
 }
 
-but this is a vanilla only since it's been a while
+but this is vanilla only since it's been a while since I've done vanilla
 */
 
 @font-face {
@@ -25,7 +25,7 @@ but this is a vanilla only since it's been a while
 	--black: #000;
 	--beige: #f0d39b;
 	--white: #fff;
-	--offwhite: #f7f7f8;
+	--off-white: #f7f7f8;
 }
 
 * {
@@ -39,7 +39,8 @@ html {
 body {
 	font-family: "Graphik Medium", sans-serif;
 	font-size: 1rem;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.05em;
+	line-height: 1.5;
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
@@ -88,8 +89,10 @@ button {
 	background-color: var(--black);
 	border: none;
 	font-family: inherit;
-	padding: 0.25rem;
+	font-size: 1rem;
+	padding: 0.5rem;
 	cursor: pointer;
+	letter-spacing: 0.05em;
 }
 
 button.button--inversed {
@@ -99,6 +102,14 @@ button.button--inversed {
 
 .border {
 	border: 1px solid var(--black);
+}
+
+.border-right {
+	border-right: 1px solid var(--black);
+}
+
+.border-left {
+	border-left: 1px solid var(--black);
 }
 
 .d-grid {
@@ -138,25 +149,71 @@ END: Main
 BEGIN: Product
 */
 
+/*
+BEGIN: Carousel/Slider/Whatever floats for boat
+*/
+
+.product-carousel__track {
+	max-width: 800px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.product-carousel__slide {
+	width: 100%;
+}
+
+.product-carousel__slide-image {
+	width: 100%;
+	height: auto;
+}
+
+/*
+END: Carousel/Slider/Whatever floats for boat
+*/
+
+
 .product {
-	background-color: var(--offwhite);
+	background-color: var(--off-white);
 }
 
 .product-details {
 	flex-direction: column;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 800px;
+	padding: 0 2rem;
+}
+
+.product-details > * {
+	margin-bottom: 1.5rem;
 }
 
 .product-details__title {
+	font-size: 1.25rem;
 	text-transform: uppercase;
 	letter-spacing: 0.25em;
 }
 
+.product-details__description {
+	margin-bottom: 3rem;
+}
+
+.product-details__label {
+	font-size: 1rem;
+}
+
+/*
+BEGIN: Color picker
+*/
 .product-details__color-picker {
 	justify-content: space-between;
+	align-items: center;
 }
 
 .product-details__color-picker > * {
 	width: 100%;
+	padding: 0.5rem;
 }
 
 .product-details__color + label .icon {
@@ -178,14 +235,78 @@ BEGIN: Product
 	color: var(--black);
 	background-color: var(--beige);
 }
+/*
+END: Color picker
+*/
 
+
+/*
+BEGIN: Quantity
+*/
 .product-details__quantity {
 	justify-content: space-between;
+	align-items: center;
 }
 
-.product-details__size-select .product-details__label {
-	justify-content: space-between;
+.product-details__quantity-control {
+	height: 2rem;
+	width: 2.75rem;
+	padding: 0.5rem;
 }
+/*
+END: Quantity
+*/
+
+/*
+BEGIN: Custom select
+*/
+.product-details__size-select {
+	margin-bottom: 0.5rem;
+}
+
+.product-details__size-select--open {
+
+}
+
+.product-details__select-label {
+	width: 100%;
+	padding: 0.5rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product-details__select-options {
+	padding: 0;
+}
+
+.product-details__select-option {
+	list-style: none;
+}
+/*
+END: Custom select
+*/
+
+/*
+BEGIN: Size chart button
+*/
+.product-details__size-chart {
+	text-align: left;
+	margin-bottom: 2rem;
+}
+/*
+END: Size chart button
+*/
+
+
+/*
+BEGIN: Cycles link
+*/
+.product-details__cycle {
+	text-align: center;
+}
+/*
+END: Cycles link
+*/
 
 /*
 END: Product
@@ -197,10 +318,17 @@ BEGIN: Shop more
 
 .shop-more {
 	width: 100%;
+	max-width: 800px;
+	padding: 2rem 2rem;
+	margin: 0 auto;
 }
 
 .shop-more__item {
 	margin-bottom: 4rem;
+}
+
+.shop-more__item:last-child {
+	margin-bottom: 0;
 }
 
 .shop-more__item > * {
@@ -208,13 +336,13 @@ BEGIN: Shop more
 	margin-bottom: 1rem;
 }
 
-.shop-more__item > *:last-child {
-	margin-bottom: 0;
-}
-
-.shop-more__item img {
+.shop-more__image {
 	width: 100%;
 	height: auto;
+}
+
+.shop-more__flow {
+	margin-bottom: 0;
 }
 
 /*
