@@ -25,34 +25,38 @@
 
 			<div class="product__column">
 				
-				<div class="product-images">
-					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
-					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
-					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
-					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
-					<img class="product-images__image" src="" loading="lazy" alt="Hi-Waist">
+				<div class="product-images" hidden>
+					<img class="product-images__image" src="../assets/top section images/highwaist_black_front_2_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="../assets/top section images/highwaist_black_front_3_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="../assets/top section images/highwaist_black_front_1024x1024 (1).jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="../assets/top section images/highwaist_black_front_4_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="../assets/top section images/highwaist_black_side_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
+					<img class="product-images__image" src="../assets/top section images/highwaist_black_back_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
 				</div>
 
-				<div class="product-carousel">
+				<div class="product-carousel" hidden>
 					<!-- 
 						I was originally thinking of doing this purely in css, however, the one key
 						to make it doing it is `scroll-snap-stop` isn't supported enough to even entertain it
 					 -->
 					<div class="product-carousel__track">
 						<div class="product-carousel__slide">
-							<img src="" loading="lazy" alt="Hi-Waist">
+							<img src="../assets/top section images/highwaist_black_front_2_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
 						</div>
 						<div class="product-carousel__slide">
-							<img src="" loading="lazy" alt="Hi-Waist">
+							<img src="../assets/top section images/highwaist_black_front_3_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
 						</div>
 						<div class="product-carousel__slide">
-							<img src="" loading="lazy" alt="Hi-Waist">
+							<img src="../assets/top section images/highwaist_black_front_1024x1024 (1).jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
 						</div>
 						<div class="product-carousel__slide">
-							<img src="" loading="lazy" alt="Hi-Waist">
+							<img src="../assets/top section images/highwaist_black_front_4_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
 						</div>
 						<div class="product-carousel__slide">
-							<img src="" loading="lazy" alt="Hi-Waist">
+							<img src="../assets/top section images/highwaist_black_side_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
+						</div>
+						<div class="product-carousel__slide">
+							<img src="../assets/top section images/highwaist_black_back_1024x1024.jpg" height="1024" weight="1024" loading="lazy" alt="Hi-Waist">
 						</div>
 					</div>
 
@@ -109,31 +113,31 @@
 					</div>
 
 					<div class="product-details__quantity border">
-						<button class="product-details__quantity-control" type="button" role="button">Minus</button>
+						<button class="product-details__quantity-control button--inversed" type="button" role="button">Minus</button>
 						<span class="text-lowercase">Quantity (<span class="product-details__number">0</span>)</span>
-						<button class="product-details__quantity-control" type="button" role="button">Plus</button>
+						<button class="product-details__quantity-control button--inversed" type="button" role="button">Plus</button>
 					</div>
 
 					<div class="product-details__size-select border">
 						<span class="product-details__label text-lowercase">Size</span>
 						<ul class="product-details__select-options">
 							<li class="product-details__select-option">
-								<button type="button" role="button">XS</button>
+								<button class="button--inversed" type="button" role="button">XS</button>
 							</li>
 							<li class="product-details__select-option">
-								<button type="button" role="button">S</button>
+								<button class="button--inversed" type="button" role="button">S</button>
 							</li>
 							<li class="product-details__select-option">
-								<button type="button" role="button">M</button>
+								<button class="button--inversed" type="button" role="button">M</button>
 							</li>
 							<li class="product-details__select-option">
-								<button type="button" role="button">L</button>
+								<button class="button--inversed" type="button" role="button">L</button>
 							</li>
 							<li class="product-details__select-option">
-								<button type="button" role="button">XL</button>
+								<button class="button--inversed" type="button" role="button">XL</button>
 							</li>
 							<li class="product-details__select-option">
-								<button type="button" role="button">XXL</button>
+								<button class="button--inversed" type="button" role="button">XXL</button>
 							</li>
 						</ul>
 					</div>
@@ -157,34 +161,34 @@
 				however only one size was given, these are local, and they aren't huge
 			 -->
 			
-			<div class="show-more__item">
-				<img src="" loading="lazy" alt="Shop Hiphugger">
+			<div class="shop-more__item">
+				<img src="../assets/bottom section images/thinx_productpage_-04.jpg" height="577" width="866" loading="lazy" alt="Shop Hiphugger">
 				<a href="#">Shop Hiphugger</a>
-				<span class="text-lowercase">Heavy days</span>
+				<span class="text-lowercase text-small">Heavy days</span>
 			</div>
 
-			<div class="show-more__item">
-				<img src="" loading="lazy" alt="Shop Cheeky">
+			<div class="shop-more__item">
+				<img src="../assets/bottom section images/thinx_productpage_-03.jpg" height="866" width="577" loading="lazy" alt="Shop Cheeky">
 				<a href="#">Shop Cheeky</a>
-				<span class="text-lowercase">light days</span>
+				<span class="text-lowercase text-small">light days</span>
 			</div>
 
-			<div class="show-more__item show-more__item--full">
-				<img src="" loading="lazy" alt="Shop Thong">
+			<div class="shop-more__item shop-more__item--full">
+				<img src="../assets/bottom section images/thinx_productpage_-05.jpg" height="577" width="866"loading="lazy" alt="Shop Thong">
 				<a href="#">Shop Thong</a>
-				<span class="text-lowercase">Lightest days</span>
+				<span class="text-lowercase text-small">Lightest days</span>
 			</div>
 
-			<div class="show-more__item">
-				<img src="" loading="lazy" alt="Shop Sport">
+			<div class="shop-more__item">
+				<img src="../assets/bottom section images/thinx_productpage_-07.jpg" height="577" width="866" loading="lazy" alt="Shop Sport">
 				<a href="#">Shop Sport</a>
-				<span class="text-lowercase">Medium days</span>
+				<span class="text-lowercase text-small">Medium days</span>
 			</div>
 
-			<div class="show-more__item">
-				<img src="" loading="lazy" alt="Shop Boyshirt">
+			<div class="shop-more__item">
+				<img src="../assets/bottom section images/thinx_productpage_-08.jpg" height="866" width="577" loading="lazy" alt="Shop Boyshirt">
 				<a href="#">Shop Boyshirt</a>
-				<span class="text-lowercase">Light days</span>
+				<span class="text-lowercase text-small">Light days</span>
 			</div>
 
 		</section>
