@@ -61,11 +61,17 @@
     const container = document.querySelector('.container')
     const zoomContainer = document.querySelector('.zoom-container')
 
+    // Leave current position of the window on click
+	let windowPosition
+
     const toggleZoom = () => {
+
     	const isOpen = zoomContainer.classList.contains('zoom-container--open') && container.classList.contains('container--fixed')
-    	console.log(isOpen)
+
     	zoomContainer.classList[isOpen ? 'remove' : 'add']('zoom-container--open')
 		container.classList[isOpen ? 'remove' : 'add']('container--fixed')
+
+		isOpen ? window.scroll(0, windowPosition) : windowPosition = window.pageYOffset
     }
 
     zoomInTrigger.forEach( image => {

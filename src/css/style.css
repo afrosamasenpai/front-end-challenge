@@ -143,7 +143,7 @@ button.button--inversed {
 
 .container--fixed {
 	position: fixed;
-	height: 100%;
+	height: 100vh;
  	overflow: hidden;
 }
 /* END: Main */
@@ -410,15 +410,32 @@ button.button--inversed {
 /* BEGIN: Zoom */
 .zoom-container {
 	position: absolute;
-	top: 0;
 	display: none;
+	background-color: var(--off-white);
 }
 
 .zoom-container--open {
 	display: block;
-	opacity: 0.5;
 }
-/* END: Zoo, */
+
+.zoom-container__close-button {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+}
+
+.zoom-container__close-button .icon {
+	width: 2rem;
+}
+
+.zoom-container__images {
+	padding: 2rem;
+}
+
+.zoom-container__image {
+	width: 100%;
+}
+/* END: Zoom */
 
 /* BEGIN: Desktop */
 @media screen and (min-width: 801px) {
