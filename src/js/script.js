@@ -62,7 +62,7 @@
     const container = document.querySelector('.container')
     const zoomContainer = document.querySelector('.zoom-container')
 
-    // Have current position outside so it can actively be used
+    // Have current position outside so it can be easily grabbed
 	let windowPosition
 
     const toggleZoom = () => {

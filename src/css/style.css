@@ -1,8 +1,7 @@
-
-
 @font-face {
 	font-family: "Graphik Medium";
 	src:
+		local("Graphik Medium"),
 		url("../../assets/fonts/Graphik-Medium.otf") format("otf"),
 		url("../../assets/fonts/Graphik-Medium.ttf") format("ttf"),
 		url("../../assets/fonts/Graphik-Medium.woff") format("woff");
@@ -437,32 +436,22 @@ button.button--inversed {
 }
 /* END: Zoom */
 
-/* BEGIN: Desktop */
+/* BEGIN: Tablet */
 @media screen and (min-width: 801px) {
 	.product {
 		background-color: var(--off-white);
 		padding-bottom: 2rem;
-		grid-template-areas: "description-left product-images description-right";
-		grid-template-columns: 283px minmax(auto, 738px) 283px;
-		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+			"product-images description-left"
+			"product-images description-right"
+			"product-images .";
+		grid-template-columns: 1fr 283px;
 		justify-content: center;
-	}
-
-	.product-images {
-		display: block;
-	}
-
-	.product-carousel {
-		display: none;
 	}
 
 	.product-images__image {
 		width: 100%;
 		height: auto;
-	}
-
-	.product__column {
-
 	}
 
 	.product__column--left {
@@ -477,27 +466,15 @@ button.button--inversed {
 		grid-area: product-images;
 	}
 
-	.product__column--sticky {
-		position: sticky;
-		top: 0;
-		height: 100vh;
-		align-items: center;
-	}
-
-	.product__sticky-element {
-		position: sticky;
-	}
-
 	.product-details {
 		padding: 0;
 	}
 
 	.shop-more {
-		max-width: unset;
-		grid-template-columns: 1fr 1fr;
+		max-width: 980px;
+		grid-template-columns: minmax(1fr, 433px) minmax(1fr, 288px);
 		grid-template-rows: 1fr 1fr 1fr;
-		/*grid-row-gap: 3rem;*/
-		/*grid-column-gap: 10rem;*/
+		grid-column-gap: 1rem;
 	}
 
 	.shop-more__item {
@@ -526,4 +503,31 @@ button.button--inversed {
 		margin-bottom: 0.25rem;
 	}
 }
+/* END: Tablet */
+
 /* END: Desktop */
+@media screen and (min-width: 1100px) {
+	.product {
+		grid-template-areas: "description-left product-images description-right";
+		grid-template-columns: 283px minmax(auto, 738px) 283px;
+	}
+
+	.product__column--sticky {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		align-items: center;
+	}
+
+	.product__sticky-element {
+		position: sticky;
+	}
+
+	.product-images {
+		display: block;
+	}
+
+	.product-carousel {
+		display: none;
+	}
+}
