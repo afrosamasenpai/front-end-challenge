@@ -162,7 +162,7 @@ button.button--inversed {
 
 .product {
 	background-color: var(--off-white);
-	padding-bottom: 2rem;
+	padding: 0 4rem 2rem;
 }
 
 /* BEGIN: Carousel/Slider/Whatever floats for boat */
@@ -231,7 +231,6 @@ button.button--inversed {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 800px;
-	padding: 0 4rem;
 }
 
 .product-details > * {
@@ -389,8 +388,7 @@ button.button--inversed {
 		background-color: var(--off-white);
 		padding-bottom: 2rem;
 		grid-template-areas: "description-left product-images description-right";
-		/*grid-template-columns: auto 738px auto;*/
-		grid-template-columns: 283px 738px 283px;
+		grid-template-columns: 283px minmax(auto, 738px) 283px;
 		grid-template-rows: auto auto auto;
 		justify-content: center;
 	}
@@ -440,11 +438,11 @@ button.button--inversed {
 	}
 
 	.shop-more {
-		max-width: 855px;
+		max-width: unset;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
 		/*grid-row-gap: 3rem;*/
-		grid-column-gap: 10rem;
+		/*grid-column-gap: 10rem;*/
 	}
 
 	.shop-more__item {
@@ -454,11 +452,11 @@ button.button--inversed {
 	}
 
 	.shop-more__item--horizontal {
-		width: 433px;
+		max-width: 433px;
 	}
 
 	.shop-more__item--vertical {
-		width: 288px;
+		max-width: 288px;
 	}
 
 	.shop-more__item--full {
