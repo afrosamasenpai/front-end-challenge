@@ -1,17 +1,4 @@
-/*
-In SASS, as you know, it'll look more like:
 
-.product {
-	&__column {}
-	&__column--sticky {}
-}
-.product-details {
-	&__title {}
-	&__description {}
-}
-
-but this is vanilla only since it's been a while since I've done vanilla
-*/
 
 @font-face {
 	font-family: "Graphik Medium";
@@ -150,11 +137,15 @@ button.button--inversed {
 
 
 /* BEGIN: Main */
-
 .container {
 	margin: 0 auto;
 }
 
+.container--fixed {
+	position: fixed;
+	height: 100%;
+ 	overflow: hidden;
+}
 /* END: Main */
 
 
@@ -165,13 +156,21 @@ button.button--inversed {
 	padding: 0 4rem 2rem;
 }
 
-/* BEGIN: Carousel/Slider/Whatever floats for boat */
-
-
+/* BEGIN: Product images */
 .product-images {
 	display: none;
 }
 
+[data-trigger-zoom-in] {
+	cursor: zoom-in;
+}
+
+[data-trigger-zoom-out] {
+	cursor: zoom-out;
+}
+/* BEGIN: Product images */
+
+/* BEGIN: Carousel/Slider/Whatever floats for boat */
 .product-carousel {
 	display: block;
 }
@@ -407,6 +406,19 @@ button.button--inversed {
 }
 
 /* END: Shop more */
+
+/* BEGIN: Zoom */
+.zoom-container {
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+.zoom-container--open {
+	display: block;
+	opacity: 0.5;
+}
+/* END: Zoo, */
 
 /* BEGIN: Desktop */
 @media screen and (min-width: 801px) {

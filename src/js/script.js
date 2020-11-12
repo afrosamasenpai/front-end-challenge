@@ -54,4 +54,37 @@
     // END: Custom select dropdown
 
 
+    // BEGIN: Zoom feature
+    const zoomInTrigger = document.querySelectorAll('[data-trigger-zoom-in]')
+    const zoomOutTrigger = document.querySelectorAll('[data-trigger-zoom-out]')
+
+    const container = document.querySelector('.container')
+    const zoomContainer = document.querySelector('.zoom-container')
+
+    const toggleZoom = () => {
+    	const isOpen = zoomContainer.classList.contains('zoom-container--open') && container.classList.contains('container--fixed')
+    	console.log(isOpen)
+    	zoomContainer.classList[isOpen ? 'remove' : 'add']('zoom-container--open')
+		container.classList[isOpen ? 'remove' : 'add']('container--fixed')
+    }
+
+    zoomInTrigger.forEach( image => {
+
+    	image.addEventListener('click', e => {
+    		console.log('Open!')
+    		toggleZoom()
+    	})
+
+    })
+
+    zoomOutTrigger.forEach( image => {
+
+    	image.addEventListener('click', e => {
+    		console.log('Close!')
+    		toggleZoom()
+    	})
+
+    })
+    // END: Zoom feature
+
 })()
