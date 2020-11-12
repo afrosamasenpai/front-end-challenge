@@ -57,37 +57,35 @@
     // BEGIN: Zoom feature
     const zoomInTrigger = document.querySelectorAll('[data-trigger-zoom-in]')
     const zoomOutTrigger = document.querySelectorAll('[data-trigger-zoom-out]')
+    const zoomTriggers = [...zoomInTrigger, ...zoomOutTrigger]
 
     const container = document.querySelector('.container')
     const zoomContainer = document.querySelector('.zoom-container')
 
-    // Leave current position of the window on click
+    // Have current position outside so it can actively be used
 	let windowPosition
 
     const toggleZoom = () => {
 
-    	const isOpen = zoomContainer.classList.contains('zoom-container--open') && container.classList.contains('container--fixed')
+    	const isOpen = 
+    		zoomContainer.classList.contains('zoom-container--open') && 
+    		container.classList.contains('container--fixed')
+
+    	isOpen ? window.scroll(0, windowPosition) : windowPosition = window.pageYOffset
 
     	zoomContainer.classList[isOpen ? 'remove' : 'add']('zoom-container--open')
 		container.classList[isOpen ? 'remove' : 'add']('container--fixed')
-
-		isOpen ? window.scroll(0, windowPosition) : windowPosition = window.pageYOffset
     }
 
-    zoomInTrigger.forEach( image => {
+    zoomTriggers.forEach( image => {
 
     	image.addEventListener('click', e => {
-    		console.log('Open!')
+    		const index = image.dataset.imageIndex || false
+    		const imageToScrollTo = document.getElementById(`zoomed-image-${index}`);
+    		
     		toggleZoom()
-    	})
 
-    })
-
-    zoomOutTrigger.forEach( image => {
-
-    	image.addEventListener('click', e => {
-    		console.log('Close!')
-    		toggleZoom()
+    		if (index) imageToScrollTo.scrollIntoView(true);
     	})
 
     })
