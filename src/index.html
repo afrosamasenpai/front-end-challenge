@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Set up here and deferred so that the page will finish loading, not worrying about it's position-->
-    <script src="js/script.js" type="module" type="text/javascript" defer></script>
+    <script src="js/script.js" type="text/javascript" defer></script>
 </head>
 <body>
 	<!-- 
@@ -34,7 +34,7 @@
 					<img class="product-images__image" src="../assets/top section images/highwaist_black_back_1024x1024.jpg" height="1024" width="738" loading="lazy" alt="Hi-Waist">
 				</div>
 
-				<div class="product-carousel" hidden>
+				<div class="product-carousel">
 					<!-- 
 						I was originally thinking of doing this purely in css, however, the one key
 						to make it work (`scroll-snap-stop`) isn't supported enough to even entertain it,
@@ -98,9 +98,9 @@
 
 			</div>
 
-			<div class="product__column product__column--left product__column--sticky">
+			<div class="product__column product__column--left product__column--sticky d-flex">
 
-				<div class="product-details">
+				<div class="product-details product__sticky-element">
 					<h1 class="product-details__title">Hi-Waist</h1>
 					<div class="product-details__description">
 						<p>Heavy days. Holds up to 2 tampon&apos;s worth.</p>
@@ -110,9 +110,9 @@
 
 			</div>
 
-			<div class="product__column product__column--right product__column--sticky">
+			<div class="product__column product__column--right product__column--sticky d-flex">
 				
-				<div class="product-details d-flex">
+				<div class="product-details product__sticky-element d-flex">
 
 					<span class="product-details__price">$35.00</span>
 
@@ -226,8 +226,8 @@
 			</div>
 
 			<div class="shop-more__item shop-more__item--vertical">
-				<img class="shop-more__image" src="../assets/bottom section images/thinx_productpage_-08.jpg" height="866" width="577" loading="lazy" alt="Shop Boyshirt">
-				<a class="shop-more__link" href="#">Shop Boyshirt</a>
+				<img class="shop-more__image" src="../assets/bottom section images/thinx_productpage_-08.jpg" height="866" width="577" loading="lazy" alt="Shop Boyshort">
+				<a class="shop-more__link" href="#">Shop Boyshort</a>
 				<span class="shop-more__flow text-lowercase text-small">Light days</span>
 			</div>
 
