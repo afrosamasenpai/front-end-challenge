@@ -20,13 +20,38 @@
     		if (changeQuantity === 'up') quantityAmount++
 
     		// Added a limit on how far down the quantity can go to match the input
-    			// because giving a negative quantity makes little sense
+			// because giving a negative quantity makes little sense
     		if (changeQuantity === 'down' && quantityAmount >= 1) quantityAmount--
 
 			quantity.value = quantityAmount
     	})
     })
     // END: Quantity selector
+
+
+    // BEGIN: Custom select dropdown
+    const selectTrigger = document.querySelector('[data-select-trigger]')
+    const selectOption = document.querySelectorAll('[data-size]')
+
+    const selectOptions = document.querySelector('.product-details__select-options')
+    const selectLabelText = document.querySelector('.product-details__select-label-text')
+
+    const triggerDropdown = () => {
+    	const isOpen = selectOptions.classList.contains('product-details__select-options--open')
+    	selectOptions.classList[isOpen ? 'remove' : 'add']('product-details__select-options--open')
+    }
+
+    selectTrigger.addEventListener('click', e => {
+    	triggerDropdown()
+    })
+
+    selectOption.forEach( option => {
+    	option.addEventListener('click', e => {
+    		selectLabelText.innerHTML = option.dataset.size
+    		triggerDropdown()
+    	})
+    })
+    // END: Custom select dropdown
 
 
 })()

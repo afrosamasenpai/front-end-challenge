@@ -324,10 +324,7 @@ button.button--inversed {
 /* BEGIN: Custom select */
 .product-details__size-select {
 	margin-bottom: 0.5rem;
-}
-
-.product-details__size-select--open {
-
+	position: relative;
 }
 
 .product-details__select-label {
@@ -340,7 +337,11 @@ button.button--inversed {
 .product-details__select-options {
 	padding: 0;
 	margin: 0;
+	position: absolute;
+	width: 100%;
+	background-color: var(--white);
 	display: none;
+	border-top: none;
 }
 
 .product-details__select-options--open {
