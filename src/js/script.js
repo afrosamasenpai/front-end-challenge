@@ -41,9 +41,7 @@
     	selectOptions.classList[isOpen ? 'remove' : 'add']('product-details__select-options--open')
     }
 
-    selectTrigger.addEventListener('click', e => {
-    	triggerDropdown()
-    })
+    selectTrigger.addEventListener('click', e => triggerDropdown())
 
     selectOption.forEach( option => {
     	option.addEventListener('click', e => {
@@ -85,6 +83,8 @@
     		
     		toggleZoom()
 
+            // This scrolls to the image that the user clicks, as it isn't
+            // using the extra props, the compadability is widespread
     		if (index) imageToScrollTo.scrollIntoView(true);
     	})
 
