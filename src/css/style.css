@@ -68,7 +68,6 @@ button.text-link:hover {
 }
 
 .visually-hidden {
-	visibility: hidden;
 	height: 0;
 	width: 0;
 	position: absolute;
@@ -90,6 +89,10 @@ button {
 button.button--inversed {
 	color: var(--black);
 	background-color: transparent;
+}
+
+input:focus + label {
+	outline: 2px solid black;
 }
 
 .border {
