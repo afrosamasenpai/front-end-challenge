@@ -38,6 +38,7 @@
 
     const triggerDropdown = () => {
     	const isOpen = selectOptions.classList.contains('product-details__select-options--open')
+        selectTrigger.setAttribute('aria-expanded', isOpen ? false : true)
     	selectOptions.classList[isOpen ? 'remove' : 'add']('product-details__select-options--open')
     }
 
